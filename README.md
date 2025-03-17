@@ -1,3 +1,1 @@
-Demoapplikcation Quiz
-
-Hier finden SIe jeweils den Letztstand aus der LV.
+Inital commit geht aus von dem Letztstand aus der ersten LV.
