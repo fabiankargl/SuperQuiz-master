@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Question</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="question-list"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label position="fixed">Fragen-ID: {{question.id}}</ion-label>
+      <ion-label position="fixed"></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
