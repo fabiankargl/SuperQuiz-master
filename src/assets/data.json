@@ -1,0 +1,24 @@
+{
+  "id": "InitialQuiz",
+  "quizName": "Random Quiz",
+  "questions": [
+    {
+      "id": "1",
+      "title": "What is the capital of France?",
+      "a1": "Paris",
+      "a2": "London",
+      "a3": "Berlin",
+      "a4": "Madrid",
+      "correct": 1
+    },
+    {
+      "id": "a0b3b88c-1f6a-4352-ada8-fe982e8b7d49",
+      "title": "What is F1?",
+      "a1": "Formula One",
+      "a2": "Formula 1",
+      "a3": "Formuloa Uno",
+      "a4": "Formuel Unu",
+      "correct": 2
+    }
+  ]
+}
