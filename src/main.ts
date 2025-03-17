@@ -1,13 +1,21 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { RouteReuseStrategy, provideRouter, withPreloading, PreloadAllModules } from '@angular/router';
-import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalone';
+import {
+  RouteReuseStrategy,
+  provideRouter,
+  withPreloading,
+  PreloadAllModules,
+} from '@angular/router';
+import {
+  IonicRouteStrategy,
+  provideIonicAngular,
+} from '@ionic/angular/standalone';
 
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
-import { addCircle, checkmark} from 'ionicons/icons';
+import { addCircle, checkmark, trash } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 
-addIcons({addCircle, checkmark});
+addIcons({ addCircle, checkmark, trash });
 
 bootstrapApplication(AppComponent, {
   providers: [

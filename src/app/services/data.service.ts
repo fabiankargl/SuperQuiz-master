@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Quiz } from './Quiz';
 import { Question } from './Question';
+import { v4 as uuidv4 } from 'uuid';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  public currentQuiz: Quiz = {id: '', quizName: 'newQuiz', questions: []};
+  public currentQuiz: Quiz = { id: '', quizName: 'newQuiz', questions: [] };
 
-  constructor() { 
+  constructor() {
     this.currentQuiz.questions.push({
       id: '1',
       title: 'What is the capital of France?',
@@ -16,8 +17,8 @@ export class DataService {
       a2: 'London',
       a3: 'Berlin',
       a4: 'Madrid',
-      correct: 1
-    })
+      correct: 1,
+    });
   }
 
   public getNewQuestion(): Question {
@@ -28,12 +29,24 @@ export class DataService {
       a2: '',
       a3: '',
       a4: '',
-      correct: 1
-    }
+      correct: 1,
+    };
   }
 
   public getQuestion(qid: string): Question | undefined {
-    return this.currentQuiz.questions.find(q => q.id === qid);
+    return this.currentQuiz.questions.find((q) => q.id === qid);
   }
 
+  public addQuestion(q: Question) {
+    if (q.id === '0') {
+      q.id = uuidv4();
+    }
+    this.currentQuiz.questions.push(q);
+  }
+
+  public deleteQuestion(q: Question) {
+    this.currentQuiz.questions = this.currentQuiz.questions.filter(
+      (question) => question.id !== q.id
+    );
+  }
 }
