@@ -18,7 +18,6 @@ import {
 import { Question } from 'src/app/services/Question';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
-import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
   selector: 'app-quiz',
@@ -59,7 +58,8 @@ export class QuizPage implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.data.loadQuiz();
     this.shuffledQuestions = [...this.data.currentQuiz.questions];
     this.shuffleArray(this.shuffledQuestions);
     this.pointer = 0;

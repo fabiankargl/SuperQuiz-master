@@ -1,13 +1,22 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
       SuperQuiz
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <p>Anzahl der Fragen: {{data.currentQuiz.questions.length}}</p>
-  <ion-button shape="round" color="primary" (click)="showList()">Fragen erstellen</ion-button>
-  <ion-button shape="round" color="primary" (click)="startQuiz()">Quiz starten</ion-button>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="quiz-info">
+    <p>Anzahl der Fragen: <strong>{{ data.currentQuiz.questions.length }}</strong></p>
+  </div>
+
+  <div class="button-container">
+    <ion-button expand="block" shape="round" color="secondary" (click)="showList()">
+      Fragen erstellen
+    </ion-button>
+    <ion-button expand="block" shape="round" color="tertiary" (click)="startQuiz()">
+      Quiz starten
+    </ion-button>
+  </div>
 </ion-content>

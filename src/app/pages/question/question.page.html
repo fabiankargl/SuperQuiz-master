@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Question</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="question-list"></ion-back-button>
@@ -8,28 +8,36 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item>
-      <ion-label position="fixed">Fragen-ID: {{question.id}}</ion-label>
-      <ion-label position="fixed"></ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Fragentext:" labelPlacement="fixed" type="text" [(ngModel)]="question.title"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Antwort1:" labelPlacement="fixed" type="text" [(ngModel)]="question.a1"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Antwort2:" labelPlacement="fixed" type="text" [(ngModel)]="question.a2"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Antwort3:" labelPlacement="fixed" type="text" [(ngModel)]="question.a3"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Antwort4:" labelPlacement="fixed" type="text" [(ngModel)]="question.a4"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Corrent:" labelPlacement="fixed" type="number" [(ngModel)]="question.correct"></ion-input>
-    </ion-item>
-  </ion-list>
+  <div id="container">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Fragen-ID</ion-label>
+        <p class="question-id">{{ question.id.split('-')[0] }}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Fragentext</ion-label>
+        <ion-input type="text" [(ngModel)]="question.title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Antwort 1</ion-label>
+        <ion-input type="text" [(ngModel)]="question.a1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Antwort 2</ion-label>
+        <ion-input type="text" [(ngModel)]="question.a2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Antwort 3</ion-label>
+        <ion-input type="text" [(ngModel)]="question.a3"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Antwort 4</ion-label>
+        <ion-input type="text" [(ngModel)]="question.a4"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Korrekte Antwort (1-4)</ion-label>
+        <ion-input type="number" [(ngModel)]="question.correct"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

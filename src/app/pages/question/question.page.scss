@@ -1,0 +1,52 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+ion-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+ion-list {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+ion-item {
+  --inner-border-width: 0px;
+  --border-color: transparent;
+  --background: transparent;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+ion-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+ion-input {
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.question-id {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}

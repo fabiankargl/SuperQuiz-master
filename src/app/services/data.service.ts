@@ -23,7 +23,7 @@ export class DataService {
     //   correct: 1,
     // });
     //this.loadQuiz();
-    this.loadQuizFromJSON();
+    this.loadQuiz();
   }
 
   loadQuizFromJSON() {
@@ -33,7 +33,7 @@ export class DataService {
         if (data) {
           this.currentQuiz = data;
         } else {
-          console.log('No data found'); 
+          console.log('No data found');
         }
       });
   }
