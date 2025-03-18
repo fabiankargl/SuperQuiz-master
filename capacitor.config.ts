@@ -1,9 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'at.ac.fhstp.fabian.superduperquiz202503',
   appName: 'SuperQuiz',
-  webDir: 'www'
+  webDir: 'www',
 };
 
 export default config;
